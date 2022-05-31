@@ -1,10 +1,10 @@
 const assertEqual = function(actual, unexpected) {
 
   if (actual !== unexpected) {
-    console.log("🛑🛑🛑 Assertion Failed: " + actual + " !== " + unexpected);
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${unexpected}`);
   } else {
     if (actual === unexpected)
-      console.log("✅✅✅ Assertion Passed: " + actual + " === " + unexpected);
+      console.log(`✅✅✅ Assertion Passed: ${actual} === ${unexpected}`);
 
   }
 
