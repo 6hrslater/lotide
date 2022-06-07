@@ -1,14 +1,4 @@
-const assertEqual = function (actual, unexpected) {
-
-    if (actual !== unexpected) {
-        console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${unexpected}`);
-    } else {
-        if (actual === unexpected)
-            console.log(`✅✅✅ Assertion Passed: ${actual} === ${unexpected}`);
-
-    }
-
-};
+const assertEqual = require('./assertEqual');
 
 const countLetters = (str) => {
     let results = {}
@@ -23,4 +13,5 @@ const countLetters = (str) => {
     return results
 }
 
-console.log(countLetters("long words"))
+module.exports = countLetters;
+// console.log(countLetters("long words"))
