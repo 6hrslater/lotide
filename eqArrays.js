@@ -1,14 +1,4 @@
-const assertEqual = function(actual, unexpected) {
-
-  if (actual !== unexpected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${unexpected}`);
-  } else {
-    if (actual === unexpected)
-      console.log(`✅✅✅ Assertion Passed: ${actual} === ${unexpected}`);
-
-  }
-
-};
+const assertEqual = require('../assertEqual');
 
 const eqArrays = function(array1, array2) {
 
@@ -21,14 +11,16 @@ const eqArrays = function(array1, array2) {
     return true;
   };
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
+// console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
+// console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => fals
+// console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
+// console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => fals
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
+// assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => fals
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => fals
+
+module.exports = eqArrays;
